@@ -161,9 +161,8 @@ extension CurrentLocationVC: UICollectionViewDelegate, UICollectionViewDelegateF
                 self.cityName.text = res.location.name
                 self.regionName.text = res.location.region
                 self.conditionImage.downloaded(from: "http:\(res.current.condition.icon)")
-                self.hourlyData = res.forecast.forecastday[0].hour
+                self.hourlyData = res.forecast.forecastday[0].hour + res.forecast.forecastday[1].hour + res.forecast.forecastday[2].hour
                 self.collectionView?.reloadData()
-                print(self.hourlyData)
             }
         }
     }

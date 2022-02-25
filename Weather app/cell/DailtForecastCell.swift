@@ -57,7 +57,7 @@ class DailtForecastCell: UICollectionViewCell {
     func setItems(item: Hour){
         hourText.text = item.time
         degreeText.text = "\(item.temp_c)°C"
-        conditionImage.downloaded(from: item.condition.icon)
+        conditionImage.downloaded(from: "http:\(item.condition.icon)")
         conditionText.text = item.condition.text
     }
 }
